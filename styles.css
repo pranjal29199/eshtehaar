@@ -1,0 +1,478 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+/*----------multi-level-accordian-menu------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+i {
+	margin-right: 10px;
+}
+
+
+.navbar-logo{
+	padding: 15px;
+  color: #fff;
+  font-family: Potra;
+}
+.navbar-mainbg{
+	background-color: #12141c;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+#navbarSupportedContent{
+	overflow: hidden;
+	position: relative;
+}
+#navbarSupportedContent ul{
+	padding: 0px;
+	margin: 0px;
+}
+#navbarSupportedContent ul li a i{
+	margin-right: 10px;
+}
+#navbarSupportedContent li {
+	list-style-type: none;
+	float: left;
+}
+#navbarSupportedContent ul li a{
+	color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 15px;
+    display: sticky;
+    padding: 20px 20px;
+    transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: sticky;
+}
+#navbarSupportedContent>ul>li.active>a{
+	color: #12141c;
+	background-color: transparent;
+	transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after {
+	content: "\f105";
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+	font-weight: 900;
+	transition: 0.5s;
+}
+#navbarSupportedContent .active>a:not(:only-child):after {
+	transform: rotate(90deg);
+}
+.hori-selector{
+	display:inline-block;
+	position:absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background-color: #fff;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-top: 10px;
+}
+.hori-selector .right,
+.hori-selector .left{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	bottom: 10px;
+}
+.hori-selector .right{
+	right: -25px;
+}
+.hori-selector .left{
+	left: -25px;
+}
+.hori-selector .right:before,
+.hori-selector .left:before{
+	content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #12141c;
+}
+.hori-selector .right:before{
+	bottom: 0;
+    right: -25px;
+}
+.hori-selector .left:before{
+	bottom: 0;
+    left: -25px;
+}
+
+@media (max-width: 991px){
+	#navbarSupportedContent ul li a{
+		padding: 12px 30px;
+	}
+	.hori-selector{
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left,
+	.hori-selector .right{
+		right: 10px;
+	}
+	.hori-selector .left{
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right{
+		bottom: -25px;
+	}
+	.hori-selector .left:before{
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before{
+		bottom: -25px;
+		left: -25px;
+	}
+}
+/*----------multi-level-accordian-menu------------*/
+
+
+/*Header and Header Title*/
+
+
+@font-face {
+  font-family: Potra;
+  src: url(potra/Potra.ttf);
+  font-weight: bold;
+}
+
+
+@font-face {
+	font-family: Headache-Font-OTF ;
+	src: url(headache/Headache-Font-OTF.otf);
+	font-weight: bold;
+  }
+
+  @font-face {
+	font-family: Anurati;
+	src: url(anurati/Anurati.otf);
+	font-weight: bold;
+  }
+
+
+
+.title{
+  background-color: #fecdaa;
+  color: #474350;
+  height: 95vh;
+  text-align: centre;
+  text-align: center;
+  color: white;
+  padding-top: 43vh;
+}
+
+
+h1{
+	font-family: Anurati;
+	margin: 0.4em 0;
+	color: black;
+}
+h2 {
+  font-family:  Headache-Font-OTF;
+  margin: 0.4em 0;
+  color: black;
+  
+}
+
+/*Header and Header Title*/
+
+
+/*Header-Button*/
+
+
+.spot {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  }
+  /*
+	  This is the outer svg wrapper that the SVG itself will 
+	  fill. Multiple svg-wrapper classes can be put side by side.
+  */
+  
+  .svg-wrapper {
+	margin-top: 10px;
+	position: relative;
+	width: 150px;
+	/*make sure to use same height/width as in the html*/
+	height: 40px;
+	display: inline-block;
+	border-radius: 3px;
+	margin-left: 5px;
+	margin-right: 5px
+  }
+  /*
+	This is where we define the fill, color, thickness,
+	and stroke pattern of the SVG when there is no hover.
+	The dasharray and offset together define the line position
+	under the words. Here's also where the transition speed is set.
+  */
+  
+  #shape {
+	stroke-width: 6px;
+	fill: transparent;
+	stroke: #009FFD;
+	stroke-dasharray: 85 400;
+	stroke-dashoffset: -220;
+	transition: 1s all ease;
+  }
+  /* 
+	  Pushing the text up into the SVG. Without this the
+	  text would be below the div's.
+  */
+  
+  #text {
+	margin-top: -35px;
+	text-align: center;
+  }
+  
+  #text a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1em;
+  }
+  /* 
+	  Changing the shape on hover. I change the color of the stroke,
+  make it thinner, then set it to again wrap around the entire parent element.
+  */
+  
+  .svg-wrapper:hover #shape {
+	stroke-dasharray: 50 0;
+	stroke-width: 3px;
+	stroke-dashoffset: 0;
+	stroke: #06D6A0;
+  }
+
+/*Header-Button*/
+
+
+
+/* Services */
+
+.heading{
+	text-align: center;
+	padding-bottom: 30px;
+	padding-top: 10px;
+}
+
+
+
+.ser-desc{
+  color: #f21b3f;
+}
+
+#service {
+	min-height:90vh;
+	display:flex;
+	align-items:center;
+  justify-content:center;
+  background-color: #d2d5dd;
+  padding-top: 20px;
+}
+
+.row{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+}
+
+.services .box {
+	background-color:#12141c;
+	overflow:hidden;
+	transition: .3s ease;
+}
+.services .box i {
+	color:#f26c4f;
+	transition:inherit;
+	transition-delay: 0s
+}
+.services h4 {
+	color:#fff;
+	transition:inherit;
+	transition-delay: .05s;
+}
+.services p {
+	color:#dfdfdf;
+	transition:inherit;
+	transition-delay: .1s;
+}
+.readmore {
+	color:#fff;
+	overflow: hidden;
+    display: inline-block;
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    padding-right: 2rem;
+}
+.readmore:before {
+	animation: ts-link-arrow-effect-animation-out;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+    background-color: #f26c4f;
+    bottom: 0;
+    height: .125rem;
+    margin: auto;
+    left: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scaleX(.2);
+    transform-origin: left center;
+    z-index: 0;
+}
+.readmore span {
+	position: relative;
+    transform: translateX(-200%);
+    display: inline-block;
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.box:hover .readmore span {
+    transform: translateX(0%);
+}
+.box:hover .readmore:before {
+	animation: ts-link-arrow-effect-animation-in;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+}
+.box:hover i,
+.box:hover h4,
+.box:hover p {
+    transform: translateY(-0.625rem);
+}
+@keyframes ts-link-arrow-effect-animation-out {
+    0% {
+        transform-origin: right center;
+        transform: scaleX(.2);
+    }
+
+    70% {
+        transform-origin: right center;
+    }
+
+    71% {
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform-origin: left center;
+        transform: scaleX(.2);
+    }
+}
+@keyframes ts-link-arrow-effect-animation-in {
+    0% {
+        transform-origin: left center;
+        transform: scaleX(.2);
+    }
+
+    70% {
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+
+    71% {
+        transform-origin: right center;
+    }
+
+    100% {
+        transform-origin: right center;
+        transform: scaleX(.2);
+    }
+}
+
+
+/* Services */
+
+
+
+/* Testimonial-Section */
+
+
+#testimonials
+{
+    padding: 30px 0 30px 0;
+    background-color: #fecdaa;
+    text-align: center;
+    color: #fff;
+}
+
+
+.testimonial-image
+{
+    border-radius: 100%;
+    width: 10%;
+    margin-top:2%;
+}
+
+#press
+{
+    background-color: #fecdaa;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.testimonial-logo
+{
+    width: 15%;
+    margin: 40px 20px 50px;
+        
+}
+
+.carousel-item
+{
+    padding: 7% 15%;
+}
+
+/* Testimonial-Section */
+
+
+/* Footer-section */
+
+
+#footer
+{
+    text-align: center;
+	padding: 7% 15%;
+  background-color: #d2d5dd;
+}
+
+.smimg
+{
+    margin: 20px 10px;
+}
+
+.foot
+{
+    padding-top: 6px;
+}
