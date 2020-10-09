@@ -19,7 +19,7 @@
 
         return check;
     });
-
+// js updates
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
